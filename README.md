@@ -110,3 +110,41 @@ print(*res)
 }
 
 
+
+ 9. 90 DEGREE ROTATE
+#include <stdio.h>
+void printMatrix(int n, int mat[n][n]) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            printf("%d ", mat[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+int main() {
+    int mat[3][3] = {
+        {0, 1, 2},
+        {3, 4, 5},
+        {6, 7, 8}
+    };
+
+    rotate90AntiClockwise(3, mat);
+    printMatrix(3, mat);
+    return 0;
+}
+
+10.
+void transpose(int n, int mat[n][n]) {
+    for (int i = 0; i < n; i++) {
+        for (int j = i + 1; j < n; j++) {
+            int temp = mat[i][j];
+            mat[i][j] = mat[j][i];
+            mat[j][i] = temp;
+        }
+    }
+}
+
+
+
+
